@@ -24,5 +24,10 @@ cd ..;
 for f in *.rar; do
   mv ${f} rar;
 done
+cd rar;
+for f in *.rar; do 
+  unrar e "$f";
+done
+cd ..;
 
 find . -maxdepth 1 -type f -exec mv {} unknown \;
